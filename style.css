@@ -84,6 +84,7 @@ input {
 
 button {
     padding: 10px;
+    margin: 5px;
     background-color: #4CAF50;
     color: #FFF;
     border: none;
@@ -93,6 +94,10 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+.delete_button {
+    background-color: #f44336;
 }
 
 table {
