@@ -22,7 +22,6 @@ async function loadCategories() {
         });
 
         const categories = await response.json();
-        console.log(categories);
 
         const tableBody = document.getElementById('categoriesTBody');
         tableBody.innerHTML = '';

@@ -13,8 +13,6 @@ window.onload = async (event) => {
         event.preventDefault();
         await updateCategory(idCategory, name.value, description.value);
     });
-
-
 };
 function getQueryParams(param) {
     const urlParams = new URLSearchParams(window.location.search);
