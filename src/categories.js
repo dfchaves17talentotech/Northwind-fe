@@ -89,3 +89,7 @@ async function deleteCategory(id) {
         window.alert('Tenemos problemas técnicos.');
     }
 };
+
+function modifyCategory (id) {
+    window.location.href = `updateCategories.html?id=${id}`;
+}
