@@ -14,6 +14,8 @@ window.onload = async (event) => {
         await updateCategory(idCategory, name.value, description.value);
     });
 };
+const apiUrl = 'https://node-project-ql7a.vercel.app';
+
 function getQueryParams(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
@@ -21,7 +23,7 @@ function getQueryParams(param) {
 
 async function loadCategory(id) {
     try {
-        const response = await fetch(`http://localhost:3000/categories/${id}`, {
+        const response = await fetch(`${apiUrl}/categories/${id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -36,7 +38,7 @@ async function loadCategory(id) {
 
 async function updateCategory(id, categoryName, categoryDescription) {
     try {
-        const response = await fetch(`http://localhost:3000/updateCategories/${id}`, {
+        const response = await fetch(`${apiUrl}/updateCategories/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
